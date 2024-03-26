@@ -1,0 +1,297 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#"
+     xml:base="http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#act -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#act">
+        <rdfs:comment xml:lang="en">the actor acts in film
+</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#Actor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#Film"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#direct -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#direct">
+        <rdfs:comment xml:lang="en">the director direct film</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#Director"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#Film"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#pay -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#pay">
+        <rdfs:comment xml:lang="en">a producer pays to actor</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#Actor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#Producer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#pay_to_director -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#pay_to_director">
+        <rdfs:comment xml:lang="en">a producer pays to director
+</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#Director"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#Producer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#ID-film -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#ID-film">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#Film"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#actor-name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#actor-name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#Actor"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#director-name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#director-name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#Director"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#film-date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#film-date">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#Film"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#film-rent -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#film-rent">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#Film"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#film-type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#film-type">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#Film"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#nationality -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#nationality">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#Actor"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#produse-date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#produse-date">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#Film"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#reward-eur -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#reward-eur">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#Actor"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#reward-syp -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#reward-syp">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#Actor"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#viewer-number -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#viewer-number">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#Film"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#Actor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#Actor"/>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#Director -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#Director"/>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#Film -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#Film"/>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#Producer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#Producer"/>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#Viewer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#Viewer"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#Actor1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#Actor1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#Actor"/>
+        <reward-syp rdf:datatype="&xsd;double">1.5E7</reward-syp>
+        <reward-eur rdf:datatype="&xsd;double">1000000.0</reward-eur>
+        <actor-name rdf:datatype="&xsd;string">Sami</actor-name>
+        <nationality rdf:datatype="&xsd;string">syrian
+</nationality>
+        <act rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#film1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#Actor2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#Actor2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#Actor"/>
+        <reward-eur rdf:datatype="&xsd;double">2000.0</reward-eur>
+        <reward-syp rdf:datatype="&xsd;double">2000000.0</reward-syp>
+        <actor-name rdf:datatype="&xsd;string">Hibbba</actor-name>
+        <nationality rdf:datatype="&xsd;string">Italyan
+</nationality>
+        <act rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#film2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#film1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#film1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#Film"/>
+        <film-date rdf:datatype="&xsd;dateTime">2000-01-01T07:00:00</film-date>
+        <ID-film rdf:datatype="&xsd;string">F1
+</ID-film>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#film2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#film2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#Film"/>
+        <film-date rdf:datatype="&xsd;dateTime">2018-01-01T07:00:00</film-date>
+        <ID-film rdf:datatype="&xsd;string">F2
+</ID-film>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#film3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#film3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/asus/ontologies/2024/2/untitled-ontology-HW#Film"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
